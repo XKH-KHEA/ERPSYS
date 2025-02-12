@@ -35,7 +35,7 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     text-align: center;
-    opacity: 0.1;
+    opacity: 1;
     display: flex;
     justify-content: center; /* Centers horizontally */
     align-items: center; /* Centers vertically */
@@ -87,7 +87,7 @@ button {
 /* Main Page */
 .main-container {
     text-align: center;
-    opacity: 0;
+    opacity: 1;
     animation: slideInMain 0.5s ease-out forwards;
 }
 
@@ -126,7 +126,7 @@ button {
 
     100% {
         transform: translateY(0);
-        opacity: 0.5;
+        opacity: 1;
     }
 }
 
