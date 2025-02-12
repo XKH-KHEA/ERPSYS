@@ -51,5 +51,16 @@ namespace ERPSYS.Controllers
             await _context.SaveChangesAsync();
             return NoContent();
         }
+        [HttpPut("{id}")]
+        public async Task<IActionResult> PutUser(int id, User user)
+        {
+            if (id != user.Id)
+            {
+                return BadRequest();
+            }
+            _context.Entry(user).State = EntityState.Modified;
+            await _context.SaveChangesAsync();
+            return NoContent();
+        }
     }
 }

@@ -71,20 +71,11 @@ namespace ERPSYS
             app.UseAuthentication();
             app.UseAuthorization();
             app.UseStaticFiles();
-            app.UseHttpsRedirection();
-            app.UseForwardedHeaders();
-            app.UseEndpoints(endpoints =>
-            {
-                endpoints.MapControllerRoute(
-                    name: "default",
-                    pattern: "{controller=Login}/{action=Index}/{id?}");
-            });
-            //app.MapControllerRoute(
-            //    name: "default",
-            //    pattern: "{controller=Login}/{action=Index}/{id?}");
+            app.MapControllerRoute(
+                name: "default",
+                pattern: "{controller=Login}/{action=Index}/{id?}");
 
             app.Run();
-
         }
     }
 }

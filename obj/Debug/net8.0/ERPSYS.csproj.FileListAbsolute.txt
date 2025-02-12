@@ -288,4 +288,3 @@ C:\Users\ROG\Documents\ASP_NET\ERPSYS\bin\Debug\net8.0\Swashbuckle.AspNetCore.Sw
 C:\Users\ROG\Documents\ASP_NET\ERPSYS\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\ROG\Documents\ASP_NET\ERPSYS\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 C:\Users\ROG\Documents\ASP_NET\ERPSYS\obj\Debug\net8.0\ERPSYS.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\ROG\Documents\ASP_NET\ERPSYS\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
