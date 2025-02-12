@@ -15,8 +15,19 @@ namespace ERPSYS
             var builder = WebApplication.CreateBuilder(args);
 
             // Configure SQL Server
+            // builder.Services.AddDbContext<ApplicationDbContext>(options =>
+            //     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+            //Configure Postgres
+            var connectionString = Environment.GetEnvironmentVariable("DATABASE_URL");
+
+            if (string.IsNullOrEmpty(connectionString))
+            {
+                // Fallback to appsettings.json if not found
+                connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+            }
+
             builder.Services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+            options.UseNpgsql(connectionString));
 
             // Configure JWT Authentication
 

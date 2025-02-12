@@ -176,6 +176,8 @@ C:\Users\ROG\Documents\ASP_NET\ERPSYS\bin\Debug\net8.0\Microsoft.IdentityModel.T
 C:\Users\ROG\Documents\ASP_NET\ERPSYS\bin\Debug\net8.0\Microsoft.SqlServer.Server.dll
 C:\Users\ROG\Documents\ASP_NET\ERPSYS\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
 C:\Users\ROG\Documents\ASP_NET\ERPSYS\bin\Debug\net8.0\Mono.TextTemplating.dll
+C:\Users\ROG\Documents\ASP_NET\ERPSYS\bin\Debug\net8.0\Npgsql.dll
+C:\Users\ROG\Documents\ASP_NET\ERPSYS\bin\Debug\net8.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
 C:\Users\ROG\Documents\ASP_NET\ERPSYS\bin\Debug\net8.0\System.CodeDom.dll
 C:\Users\ROG\Documents\ASP_NET\ERPSYS\bin\Debug\net8.0\System.Composition.AttributedModel.dll
 C:\Users\ROG\Documents\ASP_NET\ERPSYS\bin\Debug\net8.0\System.Composition.Convention.dll

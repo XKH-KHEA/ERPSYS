@@ -1,0 +1,3 @@
+  "ConnectionStrings": {
+    "DefaultConnection": "Server=KHEA\\SUN2;Database=KHERP;User Id=sa;Password=123;Encrypt=True;TrustServerCertificate=True;"
+  },
