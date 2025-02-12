@@ -283,3 +283,8 @@ C:\Users\ROG\Documents\ASP_NET\ERPSYS\obj\Debug\net8.0\refint\ERPSYS.dll
 C:\Users\ROG\Documents\ASP_NET\ERPSYS\obj\Debug\net8.0\ERPSYS.pdb
 C:\Users\ROG\Documents\ASP_NET\ERPSYS\obj\Debug\net8.0\ERPSYS.genruntimeconfig.cache
 C:\Users\ROG\Documents\ASP_NET\ERPSYS\obj\Debug\net8.0\ref\ERPSYS.dll
+C:\Users\ROG\Documents\ASP_NET\ERPSYS\bin\Debug\net8.0\Microsoft.OpenApi.dll
+C:\Users\ROG\Documents\ASP_NET\ERPSYS\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\ROG\Documents\ASP_NET\ERPSYS\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\ROG\Documents\ASP_NET\ERPSYS\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\ROG\Documents\ASP_NET\ERPSYS\obj\Debug\net8.0\ERPSYS.MvcApplicationPartsAssemblyInfo.cs

@@ -1,4 +1,5 @@
 ﻿using ERPSYS.Data;
+using ERPSYS.Models;
 using ERPSYS.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -8,6 +9,8 @@ using System.Text;
 
 namespace ERPSYS.Controllers
 {
+    [ApiController]
+    [Route("api/[controller]")]
     public class LoginController : Controller
     {
         private readonly ApplicationDbContext _context;
@@ -77,6 +80,29 @@ namespace ERPSYS.Controllers
                 return BitConverter.ToString(bytes).Replace("-", "").ToLower();
             }
         }
+        // POST: api/Users
+        [HttpPost]
+        public async Task<ActionResult<User>> PostUser(User user)
+        {
+            _context.Users.Add(user);
+            await _context.SaveChangesAsync();
+
+            return CreatedAtAction(nameof(GetUser), new { id = user.Id }, user);
+        }
+        // GET: api/Users/5
+        [HttpGet("{id}")]
+        public async Task<ActionResult<User>> GetUser(int id)
+        {
+            var user = await _context.Users.FindAsync(id);
+
+            if (user == null)
+            {
+                return NotFound();
+            }
+
+            return user;
+        }
+
     }
 
     //public class LoginController : Controller
