@@ -9,8 +9,6 @@ using System.Text;
 
 namespace ERPSYS.Controllers
 {
-    [ApiController]
-    [Route("api/[controller]")]
     public class LoginController : Controller
     {
         private readonly ApplicationDbContext _context;
@@ -80,83 +78,7 @@ namespace ERPSYS.Controllers
                 return BitConverter.ToString(bytes).Replace("-", "").ToLower();
             }
         }
-        // POST: api/Users
-        [HttpPost]
-        public async Task<ActionResult<User>> PostUser(User user)
-        {
-            _context.Users.Add(user);
-            await _context.SaveChangesAsync();
-
-            return CreatedAtAction(nameof(GetUser), new { id = user.Id }, user);
-        }
-        // GET: api/Users/5
-        [HttpGet("{id}")]
-        public async Task<ActionResult<User>> GetUser(int id)
-        {
-            var user = await _context.Users.FindAsync(id);
-
-            if (user == null)
-            {
-                return NotFound();
-            }
-
-            return user;
-        }
 
     }
-
-    //public class LoginController : Controller
-    //{
-    //    private readonly ApplicationDbContext _context;
-    //    private readonly JwtTokenService _jwtTokenService;
-
-    //    public LoginController(ApplicationDbContext context, JwtTokenService jwtTokenService)
-    //    {
-    //        _context = context;
-    //        _jwtTokenService = jwtTokenService;
-    //    }
-
-    //    [HttpGet]
-    //    public IActionResult Index()
-    //    {
-    //        return View();
-    //    }
-
-    //    [HttpPost]
-    //    public async Task<IActionResult> Authenticate(string username, string password)
-    //    {
-    //        Console.WriteLine($"Attempting login: {username}");
-
-    //        var user = await _context.Users.FirstOrDefaultAsync(u => u.Username == username);
-
-    //        if (user == null)
-    //        {
-    //            Console.WriteLine("User not found");
-    //            ViewBag.Error = "Invalid username or password";
-    //            return View("Index");
-    //        }
-
-    //        if (user.PasswordHash != HashPassword(password))
-    //        {
-    //            Console.WriteLine("Password mismatch");
-    //            ViewBag.Error = "Invalid username or password";
-    //            return View("Index");
-    //        }
-
-    //        Console.WriteLine("Login successful");
-    //        var token = _jwtTokenService.GenerateToken(username);
-    //        TempData["Token"] = token;
-    //        return RedirectToAction("Main", "Home");
-    //    }
-
-    //    private string HashPassword(string password)
-    //    {
-    //        using (var sha256 = SHA256.Create())
-    //        {
-    //            var bytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(password));
-    //            return BitConverter.ToString(bytes).Replace("-", "").ToLower();
-    //        }
-    //    }
-    //}
 
 }

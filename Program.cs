@@ -58,12 +58,14 @@ namespace ERPSYS
             builder.Services.AddControllers();
             builder.Services.AddEndpointsApiExplorer();
 
-           builder.Services.AddSwaggerGen();
-
+            builder.Services.AddSwaggerGen();
+            builder.WebHost.UseUrls("http://localhost:5000", "https://localhost:5001");
             var app = builder.Build();
 
             app.UseRouting();
+
             app.UseHttpsRedirection();
+
             app.MapControllers();
             // **This is the correct order**
             app.UseAuthentication();
@@ -71,12 +73,6 @@ namespace ERPSYS
             app.UseStaticFiles();
             app.UseHttpsRedirection();
             app.UseForwardedHeaders();
-            if (app.Environment.IsDevelopment())
-            {
-                app.UseSwagger(); // Enable Swagger endpoint
-                app.UseSwaggerUI(); // Enable Swagger UI
-            }
-
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
