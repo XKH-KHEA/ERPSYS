@@ -59,7 +59,7 @@ namespace ERPSYS
             builder.Services.AddEndpointsApiExplorer();
 
             builder.Services.AddSwaggerGen();
-            builder.WebHost.UseUrls("http://localhost:5000", "https://localhost:5001");
+            builder.WebHost.UseUrls("http://localhost:5000");
             var app = builder.Build();
 
             app.UseRouting();
