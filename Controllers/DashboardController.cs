@@ -91,7 +91,7 @@ namespace ERPSYS.Controllers
             var client = _httpClientFactory.CreateClient();
             client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
 
-            var response = await client.GetAsync("http://localhost:5065/Dashboard");
+            var response = await client.GetAsync("http://localhost:5000/Dashboard");
 
             // ✅ If API returns 401, redirect to login
             if (response.StatusCode == System.Net.HttpStatusCode.Unauthorized)
