@@ -173,11 +173,15 @@ C:\Users\ROG\Documents\ASP_NET\ERPSYS\bin\Debug\net8.0\Microsoft.IdentityModel.L
 C:\Users\ROG\Documents\ASP_NET\ERPSYS\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
 C:\Users\ROG\Documents\ASP_NET\ERPSYS\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\Users\ROG\Documents\ASP_NET\ERPSYS\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\ROG\Documents\ASP_NET\ERPSYS\bin\Debug\net8.0\Microsoft.OpenApi.dll
 C:\Users\ROG\Documents\ASP_NET\ERPSYS\bin\Debug\net8.0\Microsoft.SqlServer.Server.dll
 C:\Users\ROG\Documents\ASP_NET\ERPSYS\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
 C:\Users\ROG\Documents\ASP_NET\ERPSYS\bin\Debug\net8.0\Mono.TextTemplating.dll
 C:\Users\ROG\Documents\ASP_NET\ERPSYS\bin\Debug\net8.0\Npgsql.dll
 C:\Users\ROG\Documents\ASP_NET\ERPSYS\bin\Debug\net8.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+C:\Users\ROG\Documents\ASP_NET\ERPSYS\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\ROG\Documents\ASP_NET\ERPSYS\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\ROG\Documents\ASP_NET\ERPSYS\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 C:\Users\ROG\Documents\ASP_NET\ERPSYS\bin\Debug\net8.0\System.CodeDom.dll
 C:\Users\ROG\Documents\ASP_NET\ERPSYS\bin\Debug\net8.0\System.Composition.AttributedModel.dll
 C:\Users\ROG\Documents\ASP_NET\ERPSYS\bin\Debug\net8.0\System.Composition.Convention.dll
@@ -261,6 +265,7 @@ C:\Users\ROG\Documents\ASP_NET\ERPSYS\obj\Debug\net8.0\ERPSYS.GeneratedMSBuildEd
 C:\Users\ROG\Documents\ASP_NET\ERPSYS\obj\Debug\net8.0\ERPSYS.AssemblyInfoInputs.cache
 C:\Users\ROG\Documents\ASP_NET\ERPSYS\obj\Debug\net8.0\ERPSYS.AssemblyInfo.cs
 C:\Users\ROG\Documents\ASP_NET\ERPSYS\obj\Debug\net8.0\ERPSYS.csproj.CoreCompileInputs.cache
+C:\Users\ROG\Documents\ASP_NET\ERPSYS\obj\Debug\net8.0\ERPSYS.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\ROG\Documents\ASP_NET\ERPSYS\obj\Debug\net8.0\ERPSYS.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\ROG\Documents\ASP_NET\ERPSYS\obj\Debug\net8.0\ERPSYS.RazorAssemblyInfo.cache
 C:\Users\ROG\Documents\ASP_NET\ERPSYS\obj\Debug\net8.0\ERPSYS.RazorAssemblyInfo.cs
@@ -283,8 +288,3 @@ C:\Users\ROG\Documents\ASP_NET\ERPSYS\obj\Debug\net8.0\refint\ERPSYS.dll
 C:\Users\ROG\Documents\ASP_NET\ERPSYS\obj\Debug\net8.0\ERPSYS.pdb
 C:\Users\ROG\Documents\ASP_NET\ERPSYS\obj\Debug\net8.0\ERPSYS.genruntimeconfig.cache
 C:\Users\ROG\Documents\ASP_NET\ERPSYS\obj\Debug\net8.0\ref\ERPSYS.dll
-C:\Users\ROG\Documents\ASP_NET\ERPSYS\bin\Debug\net8.0\Microsoft.OpenApi.dll
-C:\Users\ROG\Documents\ASP_NET\ERPSYS\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
-C:\Users\ROG\Documents\ASP_NET\ERPSYS\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
-C:\Users\ROG\Documents\ASP_NET\ERPSYS\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
-C:\Users\ROG\Documents\ASP_NET\ERPSYS\obj\Debug\net8.0\ERPSYS.MvcApplicationPartsAssemblyInfo.cs

@@ -11,26 +11,28 @@ namespace ERPSYS
     {
         public static void Main(string[] args)
         {
-
             var builder = WebApplication.CreateBuilder(args);
 
-            // Configure SQL Server
-            // builder.Services.AddDbContext<ApplicationDbContext>(options =>
-            //     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
-            //Configure Postgres
+            // Get the connection string from environment variable or appsettings.json
             var connectionString = Environment.GetEnvironmentVariable("DATABASE_URL");
 
             if (string.IsNullOrEmpty(connectionString))
             {
-                // Fallback to appsettings.json if not found
                 connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
             }
+            else if (connectionString.StartsWith("postgres://"))
+            {
+                // Convert Heroku-style connection string to standard PostgreSQL format
+                var uri = new Uri(connectionString);
+                var userInfo = uri.UserInfo.Split(':');
+                connectionString = $"Host={uri.Host};Port={uri.Port};Username={userInfo[0]};Password={userInfo[1]};Database={uri.AbsolutePath.TrimStart('/')};SSL Mode=Require;Trust Server Certificate=true;";
+            }
 
+            // Configure PostgreSQL
             builder.Services.AddDbContext<ApplicationDbContext>(options =>
-            options.UseNpgsql(connectionString));
+                options.UseNpgsql(connectionString));
 
             // Configure JWT Authentication
-
             var jwtSettings = builder.Configuration.GetSection("JwtSettings");
             var secretKey = jwtSettings["SecretKey"];
 
@@ -50,34 +52,38 @@ namespace ERPSYS
                     };
                 });
 
-
             builder.Services.AddAuthorization();
             builder.Services.AddSingleton<JwtTokenService>();
             builder.Services.AddControllersWithViews();
             builder.Services.AddHttpClient();
             builder.Services.AddControllers();
             builder.Services.AddEndpointsApiExplorer();
-
             builder.Services.AddSwaggerGen();
-            builder.WebHost.UseUrls("http://localhost:5000");
+
+            // Ensure the app runs on the correct port inside a container
+            var port = Environment.GetEnvironmentVariable("PORT") ?? "8080";
+            builder.WebHost.UseUrls($"http://0.0.0.0:{port}");
+
             var app = builder.Build();
 
+            // Correct middleware order
+            if (!app.Environment.IsDevelopment())
+            {
+                app.UseHttpsRedirection(); // Keep HTTPS in production
+            }
+
+            app.UseStaticFiles();
             app.UseRouting();
-
-            app.UseHttpsRedirection();
-
-            app.MapControllers();
-            // **This is the correct order**
+            
             app.UseAuthentication();
             app.UseAuthorization();
-            app.UseStaticFiles();
+
+            app.MapControllers();
             app.MapControllerRoute(
                 name: "default",
                 pattern: "{controller=Login}/{action=Index}/{id?}");
+
             app.Run();
         }
     }
 }
-
-
-
