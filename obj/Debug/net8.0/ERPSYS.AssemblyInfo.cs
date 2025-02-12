@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ERPSYS")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9d81a3cf3b1684c7573e8e3f0906acf86b2ad7d2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+922702cd212bc87f42b5cc077d0bbf7d65295de5")]
 [assembly: System.Reflection.AssemblyProductAttribute("ERPSYS")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ERPSYS")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
