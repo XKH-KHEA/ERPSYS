@@ -1,0 +1,40 @@
+
+@{
+     ViewData["Title"] = "Payroll";
+    Layout = null;
+}
+
+<div class="card">
+    <div class="card-header">
+        <h5>Payroll</h5>
+    </div>
+    <div class="card-body">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Payroll ID</th>
+                    <th>Employee Name</th>
+                    <th>Salary</th>
+                    <th>Payment Date</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>PAY001</td>
+                    <td>John Doe</td>
+                    <td>$3,500</td>
+                    <td>2024-02-10</td>
+                    <td><span class="badge bg-success">Paid</span></td>
+                </tr>
+                <tr>
+                    <td>PAY002</td>
+                    <td>Jane Smith</td>
+                    <td>$4,000</td>
+                    <td>2024-02-08</td>
+                    <td><span class="badge bg-danger">Pending</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

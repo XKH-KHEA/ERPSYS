@@ -1,0 +1,236 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\ROG\\Documents\\ASP_NET\\ERPSYS\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{AB3F8F1F-1735-4C77-8D80-0FEFEA7D51DD}|ERPSYS.csproj|c:\\users\\rog\\documents\\asp_net\\erpsys\\wwwroot\\css\\styles.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{AB3F8F1F-1735-4C77-8D80-0FEFEA7D51DD}|ERPSYS.csproj|solutionrelative:wwwroot\\css\\styles.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AB3F8F1F-1735-4C77-8D80-0FEFEA7D51DD}|ERPSYS.csproj|c:\\users\\rog\\documents\\asp_net\\erpsys\\views\\dashboard\\index1.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AB3F8F1F-1735-4C77-8D80-0FEFEA7D51DD}|ERPSYS.csproj|solutionrelative:views\\dashboard\\index1.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AB3F8F1F-1735-4C77-8D80-0FEFEA7D51DD}|ERPSYS.csproj|c:\\users\\rog\\documents\\asp_net\\erpsys\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AB3F8F1F-1735-4C77-8D80-0FEFEA7D51DD}|ERPSYS.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AB3F8F1F-1735-4C77-8D80-0FEFEA7D51DD}|ERPSYS.csproj|c:\\users\\rog\\documents\\asp_net\\erpsys\\views\\login\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AB3F8F1F-1735-4C77-8D80-0FEFEA7D51DD}|ERPSYS.csproj|solutionrelative:views\\login\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AB3F8F1F-1735-4C77-8D80-0FEFEA7D51DD}|ERPSYS.csproj|c:\\users\\rog\\documents\\asp_net\\erpsys\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AB3F8F1F-1735-4C77-8D80-0FEFEA7D51DD}|ERPSYS.csproj|solutionrelative:controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AB3F8F1F-1735-4C77-8D80-0FEFEA7D51DD}|ERPSYS.csproj|c:\\users\\rog\\documents\\asp_net\\erpsys\\wwwroot\\css\\stylesheet.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{AB3F8F1F-1735-4C77-8D80-0FEFEA7D51DD}|ERPSYS.csproj|solutionrelative:wwwroot\\css\\stylesheet.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AB3F8F1F-1735-4C77-8D80-0FEFEA7D51DD}|ERPSYS.csproj|c:\\users\\rog\\documents\\asp_net\\erpsys\\views\\home\\main.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AB3F8F1F-1735-4C77-8D80-0FEFEA7D51DD}|ERPSYS.csproj|solutionrelative:views\\home\\main.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AB3F8F1F-1735-4C77-8D80-0FEFEA7D51DD}|ERPSYS.csproj|c:\\users\\rog\\documents\\asp_net\\erpsys\\views\\dashboard\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AB3F8F1F-1735-4C77-8D80-0FEFEA7D51DD}|ERPSYS.csproj|solutionrelative:views\\dashboard\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AB3F8F1F-1735-4C77-8D80-0FEFEA7D51DD}|ERPSYS.csproj|c:\\users\\rog\\documents\\asp_net\\erpsys\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AB3F8F1F-1735-4C77-8D80-0FEFEA7D51DD}|ERPSYS.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AB3F8F1F-1735-4C77-8D80-0FEFEA7D51DD}|ERPSYS.csproj|c:\\users\\rog\\documents\\asp_net\\erpsys\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AB3F8F1F-1735-4C77-8D80-0FEFEA7D51DD}|ERPSYS.csproj|solutionrelative:controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AB3F8F1F-1735-4C77-8D80-0FEFEA7D51DD}|ERPSYS.csproj|c:\\users\\rog\\documents\\asp_net\\erpsys\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AB3F8F1F-1735-4C77-8D80-0FEFEA7D51DD}|ERPSYS.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AB3F8F1F-1735-4C77-8D80-0FEFEA7D51DD}|ERPSYS.csproj|c:\\users\\rog\\documents\\asp_net\\erpsys\\wwwroot\\js\\javascript.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{AB3F8F1F-1735-4C77-8D80-0FEFEA7D51DD}|ERPSYS.csproj|solutionrelative:wwwroot\\js\\javascript.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AB3F8F1F-1735-4C77-8D80-0FEFEA7D51DD}|ERPSYS.csproj|c:\\users\\rog\\documents\\asp_net\\erpsys\\wwwroot\\css\\dashboard.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{AB3F8F1F-1735-4C77-8D80-0FEFEA7D51DD}|ERPSYS.csproj|solutionrelative:wwwroot\\css\\dashboard.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index1.cshtml",
+              "DocumentMoniker": "C:\\Users\\ROG\\Documents\\ASP_NET\\ERPSYS\\Views\\Dashboard\\Index1.cshtml",
+              "RelativeDocumentMoniker": "Views\\Dashboard\\Index1.cshtml",
+              "ToolTip": "C:\\Users\\ROG\\Documents\\ASP_NET\\ERPSYS\\Views\\Dashboard\\Index1.cshtml",
+              "RelativeToolTip": "Views\\Dashboard\\Index1.cshtml",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABIAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-07T01:29:13.297Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\ROG\\Documents\\ASP_NET\\ERPSYS\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\ROG\\Documents\\ASP_NET\\ERPSYS\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-06T07:26:12.699Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\ROG\\Documents\\ASP_NET\\ERPSYS\\Views\\Login\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Login\\Index.cshtml",
+              "ToolTip": "C:\\Users\\ROG\\Documents\\ASP_NET\\ERPSYS\\Views\\Login\\Index.cshtml",
+              "RelativeToolTip": "Views\\Login\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-07T01:54:05.798Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d020a93a-e0b7-4875-8a69-73703b37d3c3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DashboardController.cs",
+              "DocumentMoniker": "C:\\Users\\ROG\\Documents\\ASP_NET\\ERPSYS\\Controllers\\DashboardController.cs",
+              "RelativeDocumentMoniker": "Controllers\\DashboardController.cs",
+              "ToolTip": "C:\\Users\\ROG\\Documents\\ASP_NET\\ERPSYS\\Controllers\\DashboardController.cs",
+              "RelativeToolTip": "Controllers\\DashboardController.cs",
+              "ViewState": "AgIAAE0AAAAAAAAAAAAAAFgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-07T03:50:03.28Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "StyleSheet.css",
+              "DocumentMoniker": "C:\\Users\\ROG\\Documents\\ASP_NET\\ERPSYS\\wwwroot\\css\\StyleSheet.css",
+              "RelativeDocumentMoniker": "wwwroot\\css\\StyleSheet.css",
+              "ToolTip": "C:\\Users\\ROG\\Documents\\ASP_NET\\ERPSYS\\wwwroot\\css\\StyleSheet.css",
+              "RelativeToolTip": "wwwroot\\css\\StyleSheet.css",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAAA4AAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-02-07T01:46:25.087Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "styles.css",
+              "DocumentMoniker": "C:\\Users\\ROG\\Documents\\ASP_NET\\ERPSYS\\wwwroot\\css\\styles.css",
+              "RelativeDocumentMoniker": "wwwroot\\css\\styles.css",
+              "ToolTip": "C:\\Users\\ROG\\Documents\\ASP_NET\\ERPSYS\\wwwroot\\css\\styles.css",
+              "RelativeToolTip": "wwwroot\\css\\styles.css",
+              "ViewState": "AgIAAG4AAAAAAAAAAADgv4cAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-02-07T03:59:58.138Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Main.cshtml",
+              "DocumentMoniker": "C:\\Users\\ROG\\Documents\\ASP_NET\\ERPSYS\\Views\\Home\\Main.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Main.cshtml",
+              "ToolTip": "C:\\Users\\ROG\\Documents\\ASP_NET\\ERPSYS\\Views\\Home\\Main.cshtml",
+              "RelativeToolTip": "Views\\Home\\Main.cshtml",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-07T08:41:43.449Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\ROG\\Documents\\ASP_NET\\ERPSYS\\Views\\Dashboard\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Dashboard\\Index.cshtml",
+              "ToolTip": "C:\\Users\\ROG\\Documents\\ASP_NET\\ERPSYS\\Views\\Dashboard\\Index.cshtml",
+              "RelativeToolTip": "Views\\Dashboard\\Index.cshtml",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAAFMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-07T03:47:59.961Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\ROG\\Documents\\ASP_NET\\ERPSYS\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\ROG\\Documents\\ASP_NET\\ERPSYS\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-07T01:54:03.132Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "LoginController.cs",
+              "DocumentMoniker": "C:\\Users\\ROG\\Documents\\ASP_NET\\ERPSYS\\Controllers\\LoginController.cs",
+              "RelativeDocumentMoniker": "Controllers\\LoginController.cs",
+              "ToolTip": "C:\\Users\\ROG\\Documents\\ASP_NET\\ERPSYS\\Controllers\\LoginController.cs",
+              "RelativeToolTip": "Controllers\\LoginController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-07T03:50:26.281Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\ROG\\Documents\\ASP_NET\\ERPSYS\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\ROG\\Documents\\ASP_NET\\ERPSYS\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAADYAAAAAAAAAAAAlwEIAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-07T01:54:42.39Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "JavaScript.js",
+              "DocumentMoniker": "C:\\Users\\ROG\\Documents\\ASP_NET\\ERPSYS\\wwwroot\\js\\JavaScript.js",
+              "RelativeDocumentMoniker": "wwwroot\\js\\JavaScript.js",
+              "ToolTip": "C:\\Users\\ROG\\Documents\\ASP_NET\\ERPSYS\\wwwroot\\js\\JavaScript.js",
+              "RelativeToolTip": "wwwroot\\js\\JavaScript.js",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAACQAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-02-07T01:47:09.246Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "dashboard.css",
+              "DocumentMoniker": "C:\\Users\\ROG\\Documents\\ASP_NET\\ERPSYS\\wwwroot\\css\\dashboard.css",
+              "RelativeDocumentMoniker": "wwwroot\\css\\dashboard.css",
+              "ToolTip": "C:\\Users\\ROG\\Documents\\ASP_NET\\ERPSYS\\wwwroot\\css\\dashboard.css",
+              "RelativeToolTip": "wwwroot\\css\\dashboard.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-02-07T02:23:36.928Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

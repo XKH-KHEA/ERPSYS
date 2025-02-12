@@ -1,0 +1,83 @@
+﻿@{
+    ViewData["Title"] = "Dashboard";
+}
+<link rel="stylesheet" href="~/css/dashboard.css">
+<link rel="stylesheet" href="~/css/styles.css" />
+<div class="mt-4 container">
+    <h2 class="dashboard-title">ERP Dashboard</h2>
+
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card dashboard-card">
+                <div class="card-body">
+                    @* <h5 class="card-title">Total Employees</h5> *@
+                    @* <p class="card-text">150</p> *@
+                    <p id="token-expiry-info"></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card dashboard-card">
+                <div class="card-body">
+                    <h5 class="card-title">Pending Orders</h5>
+                    <p class="card-text">23</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card dashboard-card">
+                <div class="card-body">
+                    <h5 class="card-title">Token</h5>
+                    @* <p class="card-text">$45,000</p> *@
+                    @* <p>Your Token:</p> *@
+                    <p class="token-box">@ViewBag.Token</p>
+                    <button class=""></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<script>
+    // ✅ Auto-logout when token is expired
+    function checkTokenExpiration() {
+        const token = "@ViewBag.Token";
+
+        if (!token) {
+            // alert("Your session has expired. Redirecting to login...");
+            window.location.href = "/Login/Index";
+            return;
+        }
+
+        try {
+            const payload = JSON.parse(atob(token.split('.')[1])); // Decode JWT payload
+            const exp = payload.exp * 1000; // Convert expiration time to milliseconds
+            const currentTime = Date.now();
+
+            if (currentTime >= exp) {
+                // Token has expired, show alert and redirect
+                //alert("Your session has expired. Please log in again.");
+                document.cookie = "jwt=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+                window.location.href = "/Login/Index"; // Redirect to login
+            } else {
+                // Token is still valid, calculate remaining time
+                const remainingTime = exp - currentTime;
+                const remainingMinutes = Math.floor(remainingTime / 60000); // minutes
+                const remainingSeconds = Math.floor((remainingTime % 60000) / 1000); // seconds
+
+                // Display remaining expiration time
+                const expiryMessage = `Your token will expire in ${remainingMinutes} minutes and ${remainingSeconds} seconds.`;
+                document.getElementById("token-expiry-info").innerText = expiryMessage;
+            }
+        } catch (error) {
+            console.error("Error decoding token:", error);
+            alert("Your session has expired or the token is invalid. Please log in again.");
+            window.location.href = "/Login/Index"; // Redirect in case of error
+        }
+    }
+
+    // Run the expiration check immediately and then at regular intervals (every 30 seconds)
+    checkTokenExpiration();  // Check immediately on page load
+
+    setInterval(checkTokenExpiration, 1000);  // Check every 30 seconds
+</script>

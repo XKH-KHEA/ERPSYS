@@ -1,0 +1,23 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\ROG\\Documents\\ASP_NET\\WebApplication2\\",
+  "Documents": [],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d020a93a-e0b7-4875-8a69-73703b37d3c3}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

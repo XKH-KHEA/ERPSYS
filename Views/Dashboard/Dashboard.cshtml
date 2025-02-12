@@ -1,0 +1,79 @@
+@{
+    ViewData["Title"] = "Dashboard";
+    Layout = null;
+}
+<link rel="stylesheet" href="~/css/StyleSheet.css">
+<script src="~/js/JavaScript.js"></script>
+<div class="card">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card dashboard-card">
+                <div class="card-body">
+                    <h5 class="card-title">Period Token</h5>
+                    <p class="card-text" id="token-expiry-info"></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card dashboard-card">
+                <div class="card-body">
+                    <h5 class="card-title">Pending Tasks</h5>
+                    <p class="card-text">23</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card dashboard-card">
+                <div class="card-body">
+                    <h5 class="card-title">Revenue</h5>
+                    <p class="card-text">$45,000</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notifications & Recent Activities -->
+    <div class="row mt-4">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">Notifications</div>
+                <div class="card-body">
+                    @if (ViewBag.Notifications != null && ViewBag.Notifications.Count > 0)
+                    {
+                        <ul>
+                            @foreach (var notification in ViewBag.Notifications)
+                            {
+                                <li>@notification</li>
+                            }
+                        </ul>
+                    }
+                    else
+                    {
+                        <p>No new notifications.</p>
+                    }
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">Recent Activities</div>
+                <div class="card-body">
+                    @if (ViewBag.RecentActivities != null && ViewBag.RecentActivities.Count > 0)
+                    {
+                        <ul>
+                            @foreach (var activity in ViewBag.RecentActivities)
+                            {
+                                <li>@activity</li>
+                            }
+                        </ul>
+                    }
+                    else
+                    {
+                        <p>No recent activities.</p>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,304 @@
+﻿@{
+    ViewData["Title"] = "ERP Dashboard";
+    Layout = null;
+}
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - ERPSYS</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/ERPSYS.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+</head>
+<link rel="stylesheet" href="~/css/StyleSheet.css">
+<script src="~/js/JavaScript.js"></script>
+<div class="container-fluid">
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <button class="btn btn-dark" id="sidebarToggle">☰</button>
+        <a class="navbar-brand ml-3" href="#">ERP System</a>
+        <div class="navbar-collapse collapse">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link ml-3" href="#">HR</a></li>
+                <li class="nav-item"><a class="nav-link ml-3" href="#">Finance</a></li>
+                <li class="nav-item"><a class="nav-link ml-3" href="#">Inventory</a></li>
+                <li class="nav-item"><a class="nav-link ml-3" href="#">Sales</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="sidebar" id="sidebar">
+        <h5>Quick Links</h5>
+        <ul class="nav flex-column">
+            <li class="nav-item">
+                <a class="nav-link" href="#" onclick="loadPage('/Dashboard/Dashboard')">
+                    <i class="fas fa-tachometer-alt"></i> Dashboard
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link dropdown-toggle" href="#">
+                    <i class="fas fa-users"></i> HR
+                </a>
+                <ul class="submenu">
+                    <li><a href="#" onclick="loadPage('/Finance/Emloyeelist')"><i class="fas fa-user"></i> Employee List</a></li>
+                    <li><a href="#" onclick="loadPage('/HR/Payroll')"><i class="fas fa-file-invoice-dollar"></i> Payroll</a></li>
+                </ul>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link dropdown-toggle" href="#">
+                    <i class="fas fa-coins"></i> Finance
+                </a>
+                <ul class="submenu">
+                    <li><a href="#" onclick="loadPage('/Finance/Invoices')"><i class="fas fa-receipt"></i> Invoices</a></li>
+                    <li><a href="#" onclick="loadPage('/Finance/Expenses')"><i class="fas fa-chart-line"></i> Expenses</a></li>
+                </ul>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link dropdown-toggle" href="#">
+                    <i class="fas fa-warehouse"></i> Inventory
+                </a>
+                <ul class="submenu">
+                    <li><a href="#" onclick="loadPage('/Inventory/Stock')" ><i class="fas fa-boxes"></i> Stock</a></li>
+                    <li><a href="#" onclick="loadPage('/Inventory/Suppliers')"><i class="fas fa-truck"></i> Suppliers</a></li>
+                </ul>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link dropdown-toggle" href="#">
+                    <i class="fas fa-shopping-cart"></i> Sales
+                </a>
+                <ul class="submenu">
+                    <li><a href="#" onclick="loadPage('/Sales/Orders')"><i class="fas fa-list"></i> Orders</a></li>
+                    <li><a href="#" onclick="loadPage('/Sales/Customers')"><i class="fas fa-user-tag"></i> Customers</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="profile-box">
+            <p>Welcome, <strong>@ViewBag.Username</strong></p>
+        </div>
+
+        <!-- Dashboard Widgets -->
+
+
+    <div id="contentContainer">
+        <!-- Content will be loaded here -->
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card dashboard-card">
+                    <div class="card-body">
+                        <h5 class="card-title">Period Token</h5>
+                        <p class="card-text"  id="token-expiry-info"></p>
+                        @* <p class="card-text">150</p> *@
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card dashboard-card">
+                    <div class="card-body">
+                        <h5 class="card-title">Pending Tasks</h5>
+                        <p class="card-text">23</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card dashboard-card">
+                    <div class="card-body">
+                        <h5 class="card-title">Revenue</h5>
+                        <p class="card-text">$45,000</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Notifications & Recent Activities -->
+        <div class="row mt-4">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">Notifications</div>
+                    <div class="card-body">
+                        <ul>
+                            @foreach (var notification in ViewBag.Notifications)
+                            {
+                                <li>@notification</li>
+                            }
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">Recent Activities</div>
+                    <div class="card-body">
+                        <ul>
+                            @foreach (var activity in ViewBag.RecentActivities)
+                            {
+                                <li>@activity</li>
+                            }
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+<script>
+    // ✅ Auto-logout when token is expired
+    function checkTokenExpiration() {
+        const token = "@ViewBag.Token";
+
+        if (!token) {
+            // alert("Your session has expired. Redirecting to login...");
+            window.location.href = "/Login/Index";
+            return;
+        }
+
+        try {
+            const payload = JSON.parse(atob(token.split('.')[1])); // Decode JWT payload
+            const exp = payload.exp * 1000; // Convert expiration time to milliseconds
+            const currentTime = Date.now();
+
+            if (currentTime >= exp) {
+                // Token has expired, show alert and redirect
+                //alert("Your session has expired. Please log in again.");
+                document.cookie = "jwt=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+                window.location.href = "/Login/Index"; // Redirect to login
+            } else {
+                // Token is still valid, calculate remaining time
+                const remainingTime = exp - currentTime;
+                const remainingMinutes = Math.floor(remainingTime / 60000); // minutes
+                const remainingSeconds = Math.floor((remainingTime % 60000) / 1000); // seconds
+
+                // Display remaining expiration time
+                const expiryMessage = `${remainingMinutes} min ${remainingSeconds} s.`;
+                document.getElementById("token-expiry-info").innerText = expiryMessage;
+            }
+        } catch (error) {
+            console.error("Error decoding token:", error);
+            @* alert("Your session has expired or the token is invalid. Please log in again.");
+            window.location.href = "/Login/Index"; // Redirect in case of error *@
+        }
+    }
+
+    // Run the expiration check immediately and then at regular intervals (every 30 seconds)
+    checkTokenExpiration();  // Check immediately on page load
+
+    setInterval(checkTokenExpiration, 1000);  // Check every 30 second
+    function loadPage(url) {
+        fetch(url, {
+            method: 'GET',
+            headers: { 'X-Requested-With': 'XMLHttpRequest' } // Ensure it's an AJAX request
+        })
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById("contentContainer").innerHTML = html;
+        })
+        .catch(error => console.error("Error loading page:", error));
+    }
+
+</script>
+
+@* <div class="container-fluid"> *@
+@*     <!-- Navigation Bar --> *@
+@*     <nav class="navbar navbar-expand-lg navbar-dark bg-dark"> *@
+@*         <a class="navbar-brand" href="#">ERP System</a> *@
+@*         <div class="navbar-collapse collapse"> *@
+@*             <ul class="navbar-nav ml-auto"> *@
+@*                 <li class="nav-item"><a class="nav-link" href="#">HR</a></li> *@
+@*                 <li class="nav-item"><a class="nav-link" href="#">Finance</a></li> *@
+@*                 <li class="nav-item"><a class="nav-link" href="#">Inventory</a></li> *@
+@*                 <li class="nav-item"><a class="nav-link" href="#">Sales</a></li> *@
+@*             </ul> *@
+@*         </div> *@
+@*     </nav> *@
+
+@*     <div class="row"> *@
+@*         <!-- Sidebar --> *@
+@*         <div class="col-md-2 sidebar"> *@
+@*             <h5>Quick Links</h5> *@
+@*             <ul class="nav flex-column"> *@
+@*                 <li class="nav-item"><a class="nav-link" href="#">Dashboard</a></li> *@
+@*                 <li class="nav-item"><a class="nav-link" href="#">Reports</a></li> *@
+@*                 <li class="nav-item"><a class="nav-link" href="#">Settings</a></li> *@
+@*             </ul> *@
+@*         </div> *@
+
+@*         <!-- Main Content --> *@
+@*         <div class="col-md-10 main-content"> *@
+@*             <!-- User Profile --> *@
+@*             <div class="profile-box"> *@
+@*                 <p>Welcome, <strong>@ViewBag.Username</strong></p> *@
+@*             </div> *@
+
+@*             <!-- Dashboard Widgets --> *@
+@*             <div class="row"> *@
+@*                 <div class="col-md-4"> *@
+@*                     <div class="card dashboard-card"> *@
+@*                         <div class="card-body"> *@
+@*                             <h5 class="card-title">Total Employees</h5> *@
+@*                             <p class="card-text">150</p> *@
+@*                         </div> *@
+@*                     </div> *@
+@*                 </div> *@
+@*                 <div class="col-md-4"> *@
+@*                     <div class="card dashboard-card"> *@
+@*                         <div class="card-body"> *@
+@*                             <h5 class="card-title">Pending Tasks</h5> *@
+@*                             <p class="card-text">23</p> *@
+@*                         </div> *@
+@*                     </div> *@
+@*                 </div> *@
+@*                 <div class="col-md-4"> *@
+@*                     <div class="card dashboard-card"> *@
+@*                         <div class="card-body"> *@
+@*                             <h5 class="card-title">Revenue</h5> *@
+@*                             <p class="card-text">$45,000</p> *@
+@*                         </div> *@
+@*                     </div> *@
+@*                 </div> *@
+@*             </div> *@
+
+@*             <!-- Notifications & Recent Activities --> *@
+@*             <div class="row mt-4"> *@
+@*                 <div class="col-md-6"> *@
+@*                     <div class="card"> *@
+@*                         <div class="card-header">Notifications</div> *@
+@*                         <div class="card-body"> *@
+@*                             <ul> *@
+@*                                 @foreach (var notification in ViewBag.Notifications) *@
+@*                                 { *@
+@*                                     <li>@notification</li> *@
+@*                                 } *@
+@*                             </ul> *@
+@*                         </div> *@
+@*                     </div> *@
+@*                 </div> *@
+@*                 <div class="col-md-6"> *@
+@*                     <div class="card"> *@
+@*                         <div class="card-header">Recent Activities</div> *@
+@*                         <div class="card-body"> *@
+@*                             <ul> *@
+@*                                 @foreach (var activity in ViewBag.RecentActivities) *@
+@*                                 { *@
+@*                                     <li>@activity</li> *@
+@*                                 } *@
+@*                             </ul> *@
+@*                         </div> *@
+@*                     </div> *@
+@*                 </div> *@
+@*             </div> *@
+
+@*         </div> *@
+@*     </div> *@
+@* </div> *@
