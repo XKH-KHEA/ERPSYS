@@ -9,7 +9,8 @@ EXPOSE 8081
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
-
+# Install PostgreSQL client libraries
+RUN apt-get update && apt-get install -y libpq-dev
 # Copy the .csproj file to the container and restore dependencies
 COPY ["./ERPSYS.csproj", "./"]
 RUN dotnet restore "./ERPSYS.csproj"
