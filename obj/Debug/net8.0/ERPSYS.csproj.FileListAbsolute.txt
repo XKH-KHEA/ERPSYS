@@ -291,4 +291,3 @@ C:\Users\ROG\Documents\ASP_NET\ERPSYS\obj\Debug\net8.0\refint\ERPSYS.dll
 C:\Users\ROG\Documents\ASP_NET\ERPSYS\obj\Debug\net8.0\ERPSYS.pdb
 C:\Users\ROG\Documents\ASP_NET\ERPSYS\obj\Debug\net8.0\ERPSYS.genruntimeconfig.cache
 C:\Users\ROG\Documents\ASP_NET\ERPSYS\obj\Debug\net8.0\ref\ERPSYS.dll
-C:\Users\ROG\Documents\ASP_NET\ERPSYS\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
