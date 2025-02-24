@@ -1,0 +1,70 @@
+﻿
+@* @{ *@
+@*     ViewData["Title"] = "Image Upload"; *@
+@*     Layout = null; *@
+@* } *@
+@* <form id="uploadForm" enctype="multipart/form-data" action="/Image/UploadImage"> *@
+@*     <input type="file" id="imageFile" name="imageFile" /> *@
+@*     <button type="submit">Upload</button> *@
+@* </form> *@
+
+@* <img id="uploadedImage" src="" style="display:none; width: 200px; height: auto;" /> *@
+
+@* <script> *@
+@*     document.getElementById("uploadForm").addEventListener("submit", async function (event) { *@
+@*         event.preventDefault(); *@
+@*         let formData = new FormData(); *@
+@*         formData.append("imageFile", document.getElementById("imageFile").files[0]); *@
+
+@*         let response = await fetch('http://localhost:8080/api/images/upload', { *@
+@*             method: 'POST', *@
+@*             body: formData *@
+@*         }); *@
+
+@*         let result = await response.json(); *@
+@*         if (result.success) { *@
+@*             document.getElementById("uploadedImage").src = result.imageUrl; *@
+@*             document.getElementById("uploadedImage").style.display = "block"; *@
+@*         } else { *@
+@*             alert(result.message); *@
+@*         } *@
+@*     }); *@
+@* </script> *@
+
+@{
+    ViewData["Title"] = "Image Upload";
+    Layout = null;
+}
+<form id="uploadForm" enctype="multipart/form-data" action="/api/images/upload" method="POST">
+    <input type="file" id="imageFile" name="imageFile" />
+    <button type="submit">Upload</button>
+</form>
+
+<img id="uploadedImage" src="" style="display:none; width: 200px; height: auto;" />
+
+<script>
+    document.getElementById("uploadForm").addEventListener("submit", async function (event) {
+        event.preventDefault();
+
+        // Create FormData object to hold the file
+        let formData = new FormData();
+        formData.append("imageFile", document.getElementById("imageFile").files[0]);
+
+        // Send the request to the backend API
+        let response = await fetch('http://localhost:8080/api/images/upload', { // Replace with your actual API domain
+            method: 'POST',
+            body: formData
+        });
+
+        // Get the response data
+        let result = await response.json();
+        if (result.success) {
+            // Show the uploaded image on the page
+            document.getElementById("uploadedImage").src = result.url;
+            document.getElementById("uploadedImage").style.display = "block";
+        } else {
+            // Show an error message if upload fails
+            alert(result.message);
+        }
+    });
+</script>

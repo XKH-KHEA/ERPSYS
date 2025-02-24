@@ -24,4 +24,8 @@ public class SalesController : Controller
 
         return PartialView("Orders");
     }
+    public IActionResult Index()
+    {
+        return PartialView("Index");
+    }
 }

@@ -10,23 +10,14 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/ERPSYS.styles.css" asp-append-version="true" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-
 </head>
-<link rel="stylesheet" href="~/css/StyleSheet.css">
+<link rel="stylesheet" href="~/css/Main.css">
 <script src="~/js/JavaScript.js"></script>
 <div class="container-fluid">
     <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-dark">
         <button class="btn btn-dark" id="sidebarToggle">☰</button>
         <a class="navbar-brand ml-3" href="#">ERP System</a>
-        <div class="navbar-collapse collapse">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item"><a class="nav-link ml-3" href="#">HR</a></li>
-                <li class="nav-item"><a class="nav-link ml-3" href="#">Finance</a></li>
-                <li class="nav-item"><a class="nav-link ml-3" href="#">Inventory</a></li>
-                <li class="nav-item"><a class="nav-link ml-3" href="#">Sales</a></li>
-            </ul>
-        </div>
     </nav>
 
     <div class="sidebar" id="sidebar">
@@ -77,6 +68,16 @@
                     <li><a href="#" onclick="loadPage('/Sales/Customers')"><i class="fas fa-user-tag"></i> Customers</a></li>
                 </ul>
             </li>
+            <li class="nav-item">
+                <a class="nav-link dropdown-toggle" href="#">
+                    <i class="fas fa-headset"></i> Support
+                </a>
+                <ul class="submenu">
+                    <li><a href="#" onclick="loadPage('/Telegram/Index')"><i class="fab fa-telegram" ></i> Telegram</a></li>
+                    <li><a href="#" onclick="loadPage('/Image/Upload')"><i class="fab fa-telegram"></i> Image</a></li>
+                </ul>
+            </li>
+
         </ul>
     </div>
 
@@ -151,8 +152,6 @@
     </div>
 </div>
 </div>
-
-
 <script>
     // ✅ Auto-logout when token is expired
     function checkTokenExpiration() {

@@ -1,9 +1,10 @@
-﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
+﻿using ERPSYS.Data;
+using ERPSYS.Services;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
-using ERPSYS.Data;
-using ERPSYS.Services;
+using static Dropbox.Api.TeamLog.EventCategory;
 
 namespace ERPSYS
 {
@@ -52,6 +53,7 @@ namespace ERPSYS
                     };
                 });
 
+
             builder.Services.AddAuthorization();
             builder.Services.AddSingleton<JwtTokenService>();
             builder.Services.AddControllersWithViews();
@@ -59,10 +61,19 @@ namespace ERPSYS
             builder.Services.AddControllers();
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
-
+            builder.Services.AddSingleton<TelegramBotService>();
+            builder.Services.AddSingleton<DropboxService>();
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy("AllowAll", builder =>
+                {
+                    builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader();
+                });
+            });
             // Ensure the app runs on the correct port inside a container
             var port = Environment.GetEnvironmentVariable("PORT") ?? "8080";
-            builder.WebHost.UseUrls($"http://0.0.0.0:{port}");
+            //builder.WebHost.UseUrls($"http://0.0.0.0:{port}");
+            builder.WebHost.UseUrls($"http://localhost:{port}");
 
             var app = builder.Build();
 
@@ -72,9 +83,10 @@ namespace ERPSYS
                 app.UseHttpsRedirection(); // Keep HTTPS in production
             }
 
+
+            app.UseCors("AllowAll");
             app.UseStaticFiles();
             app.UseRouting();
-            
             app.UseAuthentication();
             app.UseAuthorization();
 

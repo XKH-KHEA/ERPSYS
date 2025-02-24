@@ -151,6 +151,7 @@ C:\Users\ROG\Documents\ASP_NET\ERPSYS\bin\Debug\net8.0\ERPSYS.dll
 C:\Users\ROG\Documents\ASP_NET\ERPSYS\bin\Debug\net8.0\ERPSYS.pdb
 C:\Users\ROG\Documents\ASP_NET\ERPSYS\bin\Debug\net8.0\Azure.Core.dll
 C:\Users\ROG\Documents\ASP_NET\ERPSYS\bin\Debug\net8.0\Azure.Identity.dll
+C:\Users\ROG\Documents\ASP_NET\ERPSYS\bin\Debug\net8.0\Dropbox.Api.dll
 C:\Users\ROG\Documents\ASP_NET\ERPSYS\bin\Debug\net8.0\Humanizer.dll
 C:\Users\ROG\Documents\ASP_NET\ERPSYS\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\ROG\Documents\ASP_NET\ERPSYS\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
@@ -177,6 +178,7 @@ C:\Users\ROG\Documents\ASP_NET\ERPSYS\bin\Debug\net8.0\Microsoft.OpenApi.dll
 C:\Users\ROG\Documents\ASP_NET\ERPSYS\bin\Debug\net8.0\Microsoft.SqlServer.Server.dll
 C:\Users\ROG\Documents\ASP_NET\ERPSYS\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
 C:\Users\ROG\Documents\ASP_NET\ERPSYS\bin\Debug\net8.0\Mono.TextTemplating.dll
+C:\Users\ROG\Documents\ASP_NET\ERPSYS\bin\Debug\net8.0\Newtonsoft.Json.dll
 C:\Users\ROG\Documents\ASP_NET\ERPSYS\bin\Debug\net8.0\Npgsql.dll
 C:\Users\ROG\Documents\ASP_NET\ERPSYS\bin\Debug\net8.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
 C:\Users\ROG\Documents\ASP_NET\ERPSYS\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
@@ -196,6 +198,7 @@ C:\Users\ROG\Documents\ASP_NET\ERPSYS\bin\Debug\net8.0\System.Runtime.Caching.dl
 C:\Users\ROG\Documents\ASP_NET\ERPSYS\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\ROG\Documents\ASP_NET\ERPSYS\bin\Debug\net8.0\System.Security.Permissions.dll
 C:\Users\ROG\Documents\ASP_NET\ERPSYS\bin\Debug\net8.0\System.Windows.Extensions.dll
+C:\Users\ROG\Documents\ASP_NET\ERPSYS\bin\Debug\net8.0\Telegram.Bot.dll
 C:\Users\ROG\Documents\ASP_NET\ERPSYS\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.resources.dll
 C:\Users\ROG\Documents\ASP_NET\ERPSYS\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.resources.dll
 C:\Users\ROG\Documents\ASP_NET\ERPSYS\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.resources.dll
@@ -288,3 +291,4 @@ C:\Users\ROG\Documents\ASP_NET\ERPSYS\obj\Debug\net8.0\refint\ERPSYS.dll
 C:\Users\ROG\Documents\ASP_NET\ERPSYS\obj\Debug\net8.0\ERPSYS.pdb
 C:\Users\ROG\Documents\ASP_NET\ERPSYS\obj\Debug\net8.0\ERPSYS.genruntimeconfig.cache
 C:\Users\ROG\Documents\ASP_NET\ERPSYS\obj\Debug\net8.0\ref\ERPSYS.dll
+C:\Users\ROG\Documents\ASP_NET\ERPSYS\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

@@ -29,7 +29,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 12 Feb 2025 08:14:55 GMT"
+          "Value": "Fri, 14 Feb 2025 07:30:04 GMT"
         }
       ],
       "EndpointProperties": [
@@ -66,7 +66,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 12 Feb 2025 08:14:55 GMT"
+          "Value": "Fri, 14 Feb 2025 07:30:04 GMT"
         }
       ],
       "EndpointProperties": [
@@ -167,8 +167,8 @@
       ]
     },
     {
-      "Route": "css/StyleSheet.css",
-      "AssetFile": "css/StyleSheet.css",
+      "Route": "css/Main.css",
+      "AssetFile": "css/Main.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -181,7 +181,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2712"
+          "Value": "4422"
         },
         {
           "Name": "Content-Type",
@@ -189,23 +189,23 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"deBolF/fXagykdvhg5JnTaCQTYQtEFCRzXX/gwFjxnk=\""
+          "Value": "\"2nR482Nj/duighavqv3KR/gy22tQYFrIjuCBXAmJZto=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 12 Feb 2025 01:37:34 GMT"
+          "Value": "Mon, 17 Feb 2025 06:34:29 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-deBolF/fXagykdvhg5JnTaCQTYQtEFCRzXX/gwFjxnk="
+          "Value": "sha256-2nR482Nj/duighavqv3KR/gy22tQYFrIjuCBXAmJZto="
         }
       ]
     },
     {
-      "Route": "css/StyleSheet.d2qik2nhxq.css",
-      "AssetFile": "css/StyleSheet.css",
+      "Route": "css/Main.e2dc6yfl6y.css",
+      "AssetFile": "css/Main.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -218,7 +218,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2712"
+          "Value": "4422"
         },
         {
           "Name": "Content-Type",
@@ -226,25 +226,25 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"deBolF/fXagykdvhg5JnTaCQTYQtEFCRzXX/gwFjxnk=\""
+          "Value": "\"2nR482Nj/duighavqv3KR/gy22tQYFrIjuCBXAmJZto=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 12 Feb 2025 01:37:34 GMT"
+          "Value": "Mon, 17 Feb 2025 06:34:29 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "d2qik2nhxq"
+          "Value": "e2dc6yfl6y"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-deBolF/fXagykdvhg5JnTaCQTYQtEFCRzXX/gwFjxnk="
+          "Value": "sha256-2nR482Nj/duighavqv3KR/gy22tQYFrIjuCBXAmJZto="
         },
         {
           "Name": "label",
-          "Value": "css/StyleSheet.css"
+          "Value": "css/Main.css"
         }
       ]
     },

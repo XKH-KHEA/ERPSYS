@@ -1,0 +1,21 @@
+﻿@{
+    ViewData["Title"] = "Send Telegram Message";
+    Layout = null;
+}
+
+<h1>Send Message to Telegram Bot</h1>
+
+<form method="post" action="/Telegram/SendMessage">
+    <div class="form-group">
+        <label for="message">Your Message:</label>
+        <input type="text" class="form-control" id="message" name="message" />
+    </div>
+    <button type="submit" class="btn btn-primary">Send</button>
+</form>
+
+@if (TempData["Message"] != null)
+{
+    <div class="alert alert-success">
+        @TempData["Message"]
+    </div>
+}
