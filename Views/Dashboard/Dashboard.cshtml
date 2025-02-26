@@ -79,31 +79,31 @@
     </div>
 
     <!-- Charts Section -->
-    @* <div class="row mt-4"> *@
-    @*     <div class="col-md-6"> *@
-    @*         <div class="card"> *@
-    @*             <div class="card-header">Sales Overview</div> *@
+    <div class="row mt-4">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">Sales Overview</div>
                 <div class="card-body">
                     <canvas id="barChart"></canvas>
                 </div>
-        @*     </div> *@
-        @* </div> *@
+            </div>
+        </div>
 
-        @* <div class="col-md-6"> *@
-        @*     <div class="card"> *@
+        <div class="col-md-6"> 
+         <div class="card">
                 <div class="card-header">Revenue Distribution</div>
                 <div class="card-body">
                     <canvas id="pieChart"></canvas>
                 </div>
-        @*     </div> *@
-        @* </div> *@
-    @* </div> *@
+            </div> 
+        </div>
+    </div>
 </div>
 
 <script>
     document.addEventListener("DOMContentLoaded", function() {
         // Bar Chart
-        var barCtx = document.getElementById('#barChart').getContext('2d');
+        var barCtx = document.getElementById('barChart').getContext('2d');
         new Chart(barCtx, {
             type: 'bar',
             data: {
@@ -123,7 +123,7 @@
         });
 
         // Pie Chart
-        var pieCtx = document.getElementById('#pieChart').getContext('2d');
+        var pieCtx = document.getElementById('pieChart').getContext('2d');
         new Chart(pieCtx, {
             type: 'pie',
             data: {
@@ -139,4 +139,13 @@
             }
         });
     });
+    console.log(document.getElementById('barChart'));
+    console.log(document.getElementById('pieChart'));
 </script>
+<style>
+    canvas {
+    width: 100% !important;
+    height: 300px !important;
+}
+
+</style>

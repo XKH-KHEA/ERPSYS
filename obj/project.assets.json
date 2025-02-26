@@ -4567,11 +4567,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ROG\\Documents\\ASP_NET\\ERPSYS\\ERPSYS.csproj",
+      "projectUniqueName": "c:\\Users\\ROG\\Documents\\ASP_NET\\ERPSYS\\ERPSYS.csproj",
       "projectName": "ERPSYS",
-      "projectPath": "C:\\Users\\ROG\\Documents\\ASP_NET\\ERPSYS\\ERPSYS.csproj",
+      "projectPath": "c:\\Users\\ROG\\Documents\\ASP_NET\\ERPSYS\\ERPSYS.csproj",
       "packagesPath": "C:\\Users\\ROG\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ROG\\Documents\\ASP_NET\\ERPSYS\\obj\\",
+      "outputPath": "c:\\Users\\ROG\\Documents\\ASP_NET\\ERPSYS\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\DevExpress 23.2\\Components\\Offline Packages",
