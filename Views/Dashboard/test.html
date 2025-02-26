@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="row mt-4">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">Sales Overview</div>
+                <div class="card-body">
+                    <canvas id="barChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6"> 
+            <div class="card">
+                <div class="card-header">Revenue Distribution</div>
+                <div class="card-body">
+                    <canvas id="pieChart"></canvas>
+                </div>
+            </div> 
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Define the data
+            var salesLabels = ["January", "February", "March", "April", "May", "June"];
+            var salesData = [12000, 15000, 11000, 18000, 17000, 20000];
+            var revenueLabels = ["Product A", "Product B", "Product C"];
+            var revenueData = [40, 30, 30];
+
+            // Bar Chart
+            var barCtx = document.getElementById('barChart').getContext('2d');
+            new Chart(barCtx, {
+                type: 'bar',
+                data: {
+                    labels: salesLabels,
+                    datasets: [{
+                        label: 'Sales',
+                        data: salesData,
+                        backgroundColor: 'rgba(54, 162, 235, 0.6)',
+                        borderColor: 'rgba(54, 162, 235, 1)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false
+                }
+            });
+
+            // Pie Chart
+            var pieCtx = document.getElementById('pieChart').getContext('2d');
+            new Chart(pieCtx, {
+                type: 'pie',
+                data: {
+                    labels: revenueLabels,
+                    datasets: [{
+                        data: revenueData,
+                        backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56']
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false
+                }
+            });
+        });
+    </script>
+</body>
+</html>

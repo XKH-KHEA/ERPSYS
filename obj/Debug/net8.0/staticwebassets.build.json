@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "UuMsjF6h9hcx2iFV1sv8h2//G8JlGSN6ITocl33VFfk=",
+  "Hash": "j4YP1p5tHfjHdLEIMmzX7oUv4fsNONPpm5HI+rJAwlQ=",
   "Source": "ERPSYS",
   "BasePath": "_content/ERPSYS",
   "Mode": "Default",
@@ -199,8 +199,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "r1w1alqu9u",
-      "Integrity": "fzZ1JuN4lzADkwNNa2RmGXjjTlMGsF+FhvEWPcUS8Wg=",
+      "Fingerprint": "pdfdr87rd1",
+      "Integrity": "4yWiY50xV1eyUonTj54pG6s3ONuVF2ZDw2M9lb2iTos=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\JavaScript.js"
@@ -2113,7 +2113,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2620"
+          "Value": "2785"
         },
         {
           "Name": "Content-Type",
@@ -2121,11 +2121,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"fzZ1JuN4lzADkwNNa2RmGXjjTlMGsF+FhvEWPcUS8Wg=\""
+          "Value": "\"4yWiY50xV1eyUonTj54pG6s3ONuVF2ZDw2M9lb2iTos=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 07 Feb 2025 03:30:09 GMT"
+          "Value": "Wed, 26 Feb 2025 03:44:39 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2135,12 +2135,12 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-fzZ1JuN4lzADkwNNa2RmGXjjTlMGsF+FhvEWPcUS8Wg="
+          "Value": "sha256-4yWiY50xV1eyUonTj54pG6s3ONuVF2ZDw2M9lb2iTos="
         }
       ]
     },
     {
-      "Route": "js/JavaScript.r1w1alqu9u.js",
+      "Route": "js/JavaScript.pdfdr87rd1.js",
       "AssetFile": "c:\\Users\\ROG\\Documents\\ASP_NET\\ERPSYS\\wwwroot\\js\\JavaScript.js",
       "Selectors": [],
       "ResponseHeaders": [
@@ -2150,7 +2150,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2620"
+          "Value": "2785"
         },
         {
           "Name": "Content-Type",
@@ -2158,11 +2158,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"fzZ1JuN4lzADkwNNa2RmGXjjTlMGsF+FhvEWPcUS8Wg=\""
+          "Value": "\"4yWiY50xV1eyUonTj54pG6s3ONuVF2ZDw2M9lb2iTos=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 07 Feb 2025 03:30:09 GMT"
+          "Value": "Wed, 26 Feb 2025 03:44:39 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2172,7 +2172,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "r1w1alqu9u"
+          "Value": "pdfdr87rd1"
         },
         {
           "Name": "label",
@@ -2180,7 +2180,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-fzZ1JuN4lzADkwNNa2RmGXjjTlMGsF+FhvEWPcUS8Wg="
+          "Value": "sha256-4yWiY50xV1eyUonTj54pG6s3ONuVF2ZDw2M9lb2iTos="
         }
       ]
     },

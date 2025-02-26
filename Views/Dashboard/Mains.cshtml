@@ -2,6 +2,7 @@
     ViewData["Title"] = "ERP Dashboard";
     Layout = null;
 }
+
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,6 +14,7 @@
 </head>
 <link rel="stylesheet" href="~/css/Main.css">
 <script src="~/js/JavaScript.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <div class="container-fluid">
     <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-dark">
@@ -34,8 +36,10 @@
                     <i class="fas fa-users"></i> HR
                 </a>
                 <ul class="submenu">
-                    <li><a href="#" onclick="loadPage('/Finance/Emloyeelist')"><i class="fas fa-user"></i> Employee List</a></li>
-                    <li><a href="#" onclick="loadPage('/HR/Payroll')"><i class="fas fa-file-invoice-dollar"></i> Payroll</a></li>
+                    <li><a href="#" onclick="loadPage('/Finance/Emloyeelist')"><i class="fas fa-user"></i> Employee
+                            List</a></li>
+                    <li><a href="#" onclick="loadPage('/HR/Payroll')"><i class="fas fa-file-invoice-dollar"></i>
+                            Payroll</a></li>
                 </ul>
             </li>
 
@@ -77,7 +81,8 @@
                 </a>
                 <ul class="submenu">
                     <li><a href="#" onclick="loadPage('/Inventory/Stock')"><i class="fas fa-boxes"></i> Stock</a></li>
-                    <li><a href="#" onclick="loadPage('/Inventory/Suppliers')"><i class="fas fa-truck"></i> Suppliers</a></li>
+                    <li><a href="#" onclick="loadPage('/Inventory/Suppliers')"><i class="fas fa-truck"></i>
+                            Suppliers</a></li>
                 </ul>
             </li>
 
@@ -87,7 +92,8 @@
                 </a>
                 <ul class="submenu">
                     <li><a href="#" onclick="loadPage('/Sales/Orders')"><i class="fas fa-list"></i> Orders</a></li>
-                    <li><a href="#" onclick="loadPage('/Sales/Customers')"><i class="fas fa-user-tag"></i> Customers</a></li>
+                    <li><a href="#" onclick="loadPage('/Sales/Customers')"><i class="fas fa-user-tag"></i> Customers</a>
+                    </li>
                 </ul>
             </li>
             <li class="nav-item">
@@ -95,7 +101,8 @@
                     <i class="fas fa-headset"></i> Support
                 </a>
                 <ul class="submenu">
-                    <li><a href="#" onclick="loadPage('/Telegram/Index')"><i class="fab fa-telegram"></i> Telegram</a></li>
+                    <li><a href="#" onclick="loadPage('/Telegram/Index')"><i class="fab fa-telegram"></i> Telegram</a>
+                    </li>
                     <li><a href="#" onclick="loadPage('/Image/Upload')"><i class="fab fa-telegram"></i> Image</a></li>
                 </ul>
             </li>
@@ -172,9 +179,73 @@
                 </div>
             </div>
         </div>
+        <div class="row mt-4">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">Sales Overview</div>
+                    <div class="card-body">
+                        <canvas id="barChart" width="400" height="200"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">Revenue Distribution</div>
+                    <div class="card-body">
+                        <canvas id="pieChart" width="400" height="200"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+
 </div>
 <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // Define the data
+        var salesLabels = ["January", "February", "March", "April", "May", "June"];
+        var salesData = [12000, 15000, 11000, 18000, 17000, 20000];
+        var revenueLabels = ["Product A", "Product B", "Product C"];
+        var revenueData = [40, 30, 30];
+
+        // Bar Chart
+        var barCtx = document.getElementById('barChart').getContext('2d');
+        new Chart(barCtx, {
+            type: 'bar',
+            data: {
+                labels: salesLabels,
+                datasets: [{
+                    label: 'Sales',
+                    data: salesData,
+                    backgroundColor: 'rgba(54, 162, 235, 0.6)',
+                    borderColor: 'rgba(54, 162, 235, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false
+            }
+        });
+
+        // Pie Chart
+        var pieCtx = document.getElementById('pieChart').getContext('2d');
+        new Chart(pieCtx, {
+            type: 'pie',
+            data: {
+                labels: revenueLabels,
+                datasets: [{
+                    data: revenueData,
+                    backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56']
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false
+            }
+        });
+    });
     // ✅ Auto-logout when token is expired
     function checkTokenExpiration() {
         const token = "@ViewBag.Token";
@@ -221,11 +292,11 @@
             method: 'GET',
             headers: { 'X-Requested-With': 'XMLHttpRequest' } // Ensure it's an AJAX request
         })
-        .then(response => response.text())
-        .then(html => {
-            document.getElementById("contentContainer").innerHTML = html;
-        })
-        .catch(error => console.error("Error loading page:", error));
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById("contentContainer").innerHTML = html;
+            })
+            .catch(error => console.error("Error loading page:", error));
     }
 
 </script>

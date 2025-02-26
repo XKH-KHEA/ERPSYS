@@ -38,6 +38,10 @@ namespace ERPSYS
             // Configure JWT Authentication
             var jwtSettings = builder.Configuration.GetSection("JwtSettings");
             var secretKey = jwtSettings["SecretKey"];
+            if (string.IsNullOrEmpty(secretKey))
+            {
+                throw new ArgumentNullException(nameof(secretKey), "SecretKey cannot be null or empty.");
+            }
 
             builder.Services
                 .AddAuthentication(JwtBearerDefaults.AuthenticationScheme)

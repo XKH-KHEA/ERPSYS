@@ -17,8 +17,8 @@ namespace ERPSYS.Models
     public class User
     {
         public int Id { get; set; }
-        public string Username { get; set; }  // This will map to varchar in PostgreSQL
-        public string PasswordHash { get; set; } // This will map to varchar in PostgreSQL
+        public string? Username { get; set; }  // This will map to varchar in PostgreSQL
+        public string? PasswordHash { get; set; } // This will map to varchar in PostgreSQL
     }
 
 }

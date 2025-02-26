@@ -21,7 +21,7 @@ namespace ERPSYS.Controllers
             {
                 return RedirectToLogin();
             }
-            
+
             // ✅ Check if Token is Expired
             if (IsTokenExpired(token))
             {
@@ -33,7 +33,7 @@ namespace ERPSYS.Controllers
             var client = _httpClientFactory.CreateClient();
             client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
             //for production
-           // var response = await client.GetAsync("https://erpsys-29yn.onrender.com/Dashboard");
+            // var response = await client.GetAsync("https://erpsys-29yn.onrender.com/Dashboard");
             //for local testing
             var response = await client.GetAsync("http://localhost:8080/Dashboard");
 
@@ -47,6 +47,10 @@ namespace ERPSYS.Controllers
             var data = await response.Content.ReadAsStringAsync();
             ViewBag.Data = data;
             ViewBag.Token = token;
+            ViewBag.SalesData = new List<int> { 12000, 15000, 11000, 18000, 17000, 20000 };
+            ViewBag.Labels = new List<string> { "January", "February", "March", "April", "May", "June" };
+            ViewBag.RevenueDistribution = new List<int> { 40, 30, 30 };
+            ViewBag.RevenueLabels = new List<string> { "Product A", "Product B", "Product C" };
 
             return View();
         }
@@ -111,8 +115,13 @@ namespace ERPSYS.Controllers
         }
         public IActionResult Dashboard()
         {
+            ViewBag.SalesData = new List<int> { 12000, 15000, 11000, 18000, 17000, 20000 };
+            ViewBag.Labels = new List<string> { "January", "February", "March", "April", "May", "June" };
+            ViewBag.RevenueDistribution = new List<int> { 40, 30, 30 };
+            ViewBag.RevenueLabels = new List<string> { "Product A", "Product B", "Product C" };
+
             return PartialView("Dashboard");
         }
-      
+
     }
 }

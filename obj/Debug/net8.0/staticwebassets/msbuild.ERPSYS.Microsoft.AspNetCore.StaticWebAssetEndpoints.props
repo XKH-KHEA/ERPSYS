@@ -87,14 +87,14 @@
     <StaticWebAssetEndpoint Include="_content/ERPSYS/js/JavaScript.js">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\JavaScript.js'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-fzZ1JuN4lzADkwNNa2RmGXjjTlMGsF\u002BFhvEWPcUS8Wg="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"2620"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022fzZ1JuN4lzADkwNNa2RmGXjjTlMGsF\u002BFhvEWPcUS8Wg=\u0022"},{"Name":"Last-Modified","Value":"Fri, 07 Feb 2025 03:30:09 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-4yWiY50xV1eyUonTj54pG6s3ONuVF2ZDw2M9lb2iTos="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"2785"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u00224yWiY50xV1eyUonTj54pG6s3ONuVF2ZDw2M9lb2iTos=\u0022"},{"Name":"Last-Modified","Value":"Wed, 26 Feb 2025 03:44:39 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/ERPSYS/js/JavaScript.r1w1alqu9u.js">
+    <StaticWebAssetEndpoint Include="_content/ERPSYS/js/JavaScript.pdfdr87rd1.js">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\JavaScript.js'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"r1w1alqu9u"},{"Name":"integrity","Value":"sha256-fzZ1JuN4lzADkwNNa2RmGXjjTlMGsF\u002BFhvEWPcUS8Wg="},{"Name":"label","Value":"_content/ERPSYS/js/JavaScript.js"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"2620"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022fzZ1JuN4lzADkwNNa2RmGXjjTlMGsF\u002BFhvEWPcUS8Wg=\u0022"},{"Name":"Last-Modified","Value":"Fri, 07 Feb 2025 03:30:09 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"pdfdr87rd1"},{"Name":"integrity","Value":"sha256-4yWiY50xV1eyUonTj54pG6s3ONuVF2ZDw2M9lb2iTos="},{"Name":"label","Value":"_content/ERPSYS/js/JavaScript.js"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"2785"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u00224yWiY50xV1eyUonTj54pG6s3ONuVF2ZDw2M9lb2iTos=\u0022"},{"Name":"Last-Modified","Value":"Wed, 26 Feb 2025 03:44:39 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/ERPSYS/js/main.97epenjevj.js">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\main.js'))</AssetFile>
