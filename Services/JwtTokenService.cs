@@ -40,7 +40,7 @@ namespace ERPSYS.Services
                 issuer: jwtSettings["Issuer"],
                 audience: jwtSettings["Audience"],
                 claims: claims,
-                expires: DateTime.UtcNow.AddMinutes(20), // Token expires in 30 minutes
+                expires: DateTime.UtcNow.AddMinutes(5), // Token expires in 30 minutes
                 signingCredentials: credentials
             );
 

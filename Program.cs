@@ -15,23 +15,25 @@ namespace ERPSYS
             var builder = WebApplication.CreateBuilder(args);
 
             // Get the connection string from environment variable or appsettings.json
-            var connectionString = Environment.GetEnvironmentVariable("DATABASE_URL");
+            //var connectionString = Environment.GetEnvironmentVariable("DATABASE_URL");
 
-            if (string.IsNullOrEmpty(connectionString))
-            {
-                connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
-            }
-            else if (connectionString.StartsWith("postgres://"))
-            {
-                // Convert Heroku-style connection string to standard PostgreSQL format
-                var uri = new Uri(connectionString);
-                var userInfo = uri.UserInfo.Split(':');
-                connectionString = $"Host={uri.Host};Port={uri.Port};Username={userInfo[0]};Password={userInfo[1]};Database={uri.AbsolutePath.TrimStart('/')};SSL Mode=Require;Trust Server Certificate=true;";
-            }
+            //if (string.IsNullOrEmpty(connectionString))
+            //{
+            //    connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+            //}
+            //else if (connectionString.StartsWith("postgres://"))
+            //{
+            //    // Convert Heroku-style connection string to standard PostgreSQL format
+            //    var uri = new Uri(connectionString);
+            //    var userInfo = uri.UserInfo.Split(':');
+            //    connectionString = $"Host={uri.Host};Port={uri.Port};Username={userInfo[0]};Password={userInfo[1]};Database={uri.AbsolutePath.TrimStart('/')};SSL Mode=Require;Trust Server Certificate=true;";
+            //}
 
             // Configure PostgreSQL
+            //builder.Services.AddDbContext<ApplicationDbContext>(options =>
+            //    options.UseNpgsql(connectionString));
             builder.Services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseNpgsql(connectionString));
+             options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
             // Configure JWT Authentication
             var jwtSettings = builder.Configuration.GetSection("JwtSettings");

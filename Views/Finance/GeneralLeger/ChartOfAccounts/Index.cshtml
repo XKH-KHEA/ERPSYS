@@ -1,0 +1,97 @@
+﻿@model IEnumerable<ERPSYS.Models.ChartOfAccount>
+
+@{
+    ViewData["Title"] = "Chart of Accounts";
+    var totalBalance = Model.Sum(a => a.Balance); // Calculate sum of balances
+    var totalAccounts = Model.Count(); // Count total rows
+}
+<h1>Chart of Accounts</h1>
+
+<!-- Row for Buttons and Summary -->
+<div class="d-flex justify-content-between align-items-center mb-3">
+    <div>
+        <a href="#" class="btn btn-primary" onclick="loadPage('/ChartOfAccounts/Create')">
+            <i class="fas fa-receipt"></i> Add New Account
+        </a>
+    </div>
+    <div class="text-end">
+        <h5>Total Accounts: <span class="badge bg-secondary">@totalAccounts</span></h5>
+        <h5>Total Balance: <span class="badge bg-success">@totalBalance.ToString("C")</span></h5>
+    </div>
+</div>
+<!-- Table -->
+
+<!-- Table with Filters -->
+<table class="table-striped mt-3 table" id="accountsTable">
+    <thead class="table-dark">
+        <tr>
+            <th><input type="text" class="form-control form-control-sm" placeholder="Filter ID" onkeyup="filterTable(0)"></th>
+            <th><input type="text" class="form-control form-control-sm" placeholder="Filter Name" onkeyup="filterTable(1)"></th>
+            <th><input type="text" class="form-control form-control-sm" placeholder="Filter Type" onkeyup="filterTable(2)"></th>
+            <th>Balance</th>
+        </tr>
+        <tr>
+            <th>Account ID</th>
+            <th>Account Name</th>
+            <th>Account Type</th>
+            <th>Balance</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var account in Model)
+        {
+            <tr>
+                <td>@account.AccountId</td>
+                <td>@account.AccountName</td>
+                <td>@account.AccountType</td>
+                <td>@account.Balance.ToString("C")</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<!-- Bootstrap Modal for Create Form -->
+<div class="modal fade" id="createModal" tabindex="-1" aria-labelledby="createModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="createModalLabel">Create New Account</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div id="createFormContainer">
+                    <!-- Create form will load here -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- jQuery to load the Create form dynamically -->
+<script>
+    function loadPage(url) {
+        fetch(url, {
+            method: 'GET',
+            headers: { 'X-Requested-With': 'XMLHttpRequest' } // Ensure it's an AJAX request
+        })
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById("contentContainer").innerHTML = html;
+        })
+        .catch(error => console.error("Error loading page:", error));
+    }
+    function filterTable(columnIndex) {
+        var input = document.querySelectorAll("thead input")[columnIndex];
+        var filter = input.value.toLowerCase();
+        var table = document.getElementById("accountsTable");
+        var rows = table.getElementsByTagName("tr");
+
+        for (var i = 2; i < rows.length; i++) { // Start from 2 to skip input fields
+            var cell = rows[i].getElementsByTagName("td")[columnIndex];
+            if (cell) {
+                var textValue = cell.textContent || cell.innerText;
+                rows[i].style.display = textValue.toLowerCase().includes(filter) ? "" : "none";
+            }
+        }
+
+</script>

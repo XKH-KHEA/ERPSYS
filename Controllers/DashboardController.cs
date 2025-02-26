@@ -33,9 +33,9 @@ namespace ERPSYS.Controllers
             var client = _httpClientFactory.CreateClient();
             client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
             //for production
-            var response = await client.GetAsync("https://erpsys-29yn.onrender.com/Dashboard");
+           // var response = await client.GetAsync("https://erpsys-29yn.onrender.com/Dashboard");
             //for local testing
-           // var response = await client.GetAsync("http://localhost:8080/Dashboard");
+            var response = await client.GetAsync("http://localhost:8080/Dashboard");
 
             // ✅ If API returns 401, redirect to login
             if (response.StatusCode == System.Net.HttpStatusCode.Unauthorized)
@@ -68,7 +68,7 @@ namespace ERPSYS.Controllers
         // Example Controller Code
         public async Task<IActionResult> Mains()
         {
-            ViewBag.Username = "John Doe";  // Simulated user
+            ViewBag.Username = "Khea On";  // Simulated user
             ViewBag.Notifications = new string[] { "New Order Received", "Task Deadline Approaching", "New Employee Added" };
             ViewBag.RecentActivities = new string[]
             {
@@ -93,9 +93,9 @@ namespace ERPSYS.Controllers
             var client = _httpClientFactory.CreateClient();
             client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
 
-            var response = await client.GetAsync("https://erpsys-29yn.onrender.com/Dashboard");
+            //var response = await client.GetAsync("https://erpsys-29yn.onrender.com/Dashboard");
             // for local testing
-            //var response = await client.GetAsync("http://localhost:8080/Dashboard");
+            var response = await client.GetAsync("http://localhost:8080/Dashboard");
             // ✅ If API returns 401, redirect to login
             if (response.StatusCode == System.Net.HttpStatusCode.Unauthorized)
             {

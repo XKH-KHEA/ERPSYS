@@ -44,9 +44,31 @@
                     <i class="fas fa-coins"></i> Finance
                 </a>
                 <ul class="submenu">
-                    <li><a href="#" onclick="loadPage('/Finance/Invoices')"><i class="fas fa-receipt"></i> Invoices</a></li>
-                    <li><a href="#" onclick="loadPage('/Finance/Expenses')"><i class="fas fa-chart-line"></i> Expenses</a></li>
+                    <li>
+                        <a href="#" onclick="loadPage('/ChartOfAccounts/Create')">
+                            <i class="fas fa-plus-circle"></i> Create Account
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" onclick="loadPage('/ChartOfAccounts/Index')">
+                            <i class="fas fa-list-alt"></i> Chart Of Accounts
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" onclick="loadPage('/Finance/Invoices')">
+                            <i class="fas fa-file-invoice-dollar"></i> Invoices
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" onclick="loadPage('/Finance/Expenses')">
+                            <i class="fas fa-chart-line"></i> Expenses
+                        </a>
+                    </li>
                 </ul>
+
             </li>
 
             <li class="nav-item">
@@ -54,7 +76,7 @@
                     <i class="fas fa-warehouse"></i> Inventory
                 </a>
                 <ul class="submenu">
-                    <li><a href="#" onclick="loadPage('/Inventory/Stock')" ><i class="fas fa-boxes"></i> Stock</a></li>
+                    <li><a href="#" onclick="loadPage('/Inventory/Stock')"><i class="fas fa-boxes"></i> Stock</a></li>
                     <li><a href="#" onclick="loadPage('/Inventory/Suppliers')"><i class="fas fa-truck"></i> Suppliers</a></li>
                 </ul>
             </li>
@@ -73,7 +95,7 @@
                     <i class="fas fa-headset"></i> Support
                 </a>
                 <ul class="submenu">
-                    <li><a href="#" onclick="loadPage('/Telegram/Index')"><i class="fab fa-telegram" ></i> Telegram</a></li>
+                    <li><a href="#" onclick="loadPage('/Telegram/Index')"><i class="fab fa-telegram"></i> Telegram</a></li>
                     <li><a href="#" onclick="loadPage('/Image/Upload')"><i class="fab fa-telegram"></i> Image</a></li>
                 </ul>
             </li>
@@ -90,67 +112,67 @@
         <!-- Dashboard Widgets -->
 
 
-    <div id="contentContainer">
-        <!-- Content will be loaded here -->
-        <div class="row">
-            <div class="col-md-4">
-                <div class="card dashboard-card">
-                    <div class="card-body">
-                        <h5 class="card-title">Period Token</h5>
-                        <p class="card-text"  id="token-expiry-info"></p>
-                        @* <p class="card-text">150</p> *@
+        <div id="contentContainer">
+            <!-- Content will be loaded here -->
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card dashboard-card">
+                        <div class="card-body">
+                            <h5 class="card-title">Period Token</h5>
+                            <p class="card-text" id="token-expiry-info"></p>
+                            @* <p class="card-text">150</p> *@
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card dashboard-card">
+                        <div class="card-body">
+                            <h5 class="card-title">Pending Tasks</h5>
+                            <p class="card-text">23</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card dashboard-card">
+                        <div class="card-body">
+                            <h5 class="card-title">Revenue</h5>
+                            <p class="card-text">$45,000</p>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="card dashboard-card">
-                    <div class="card-body">
-                        <h5 class="card-title">Pending Tasks</h5>
-                        <p class="card-text">23</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card dashboard-card">
-                    <div class="card-body">
-                        <h5 class="card-title">Revenue</h5>
-                        <p class="card-text">$45,000</p>
-                    </div>
-                </div>
-            </div>
-        </div>
 
-        <!-- Notifications & Recent Activities -->
-        <div class="row mt-4">
-            <div class="col-md-6">
-                <div class="card">
-                    <div class="card-header">Notifications</div>
-                    <div class="card-body">
-                        <ul>
-                            @foreach (var notification in ViewBag.Notifications)
-                            {
-                                <li>@notification</li>
-                            }
-                        </ul>
+            <!-- Notifications & Recent Activities -->
+            <div class="row mt-4">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header">Notifications</div>
+                        <div class="card-body">
+                            <ul>
+                                @foreach (var notification in ViewBag.Notifications)
+                                {
+                                    <li>@notification</li>
+                                }
+                            </ul>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-6">
-                <div class="card">
-                    <div class="card-header">Recent Activities</div>
-                    <div class="card-body">
-                        <ul>
-                            @foreach (var activity in ViewBag.RecentActivities)
-                            {
-                                <li>@activity</li>
-                            }
-                        </ul>
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header">Recent Activities</div>
+                        <div class="card-body">
+                            <ul>
+                                @foreach (var activity in ViewBag.RecentActivities)
+                                {
+                                    <li>@activity</li>
+                                }
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 </div>
 <script>
     // ✅ Auto-logout when token is expired

@@ -5,8 +5,6 @@ using Microsoft.EntityFrameworkCore;
 
 namespace ERPSYS.Controllers
 {
-    [ApiController]
-    [Route("api/[controller]")]
     public class UsersController : ControllerBase
     {
         private readonly ApplicationDbContext _context;

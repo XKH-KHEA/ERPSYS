@@ -1,1 +1,10 @@
-﻿
+﻿@ERPSYS_HostAddress = http://localhost:8080
+
+@id=1
+GET {{ERPSYS_HostAddress}}/{{id}}
+
+###
+
+GET {{ERPSYS_HostAddress}}/chartofaccounts/index/{id}
+
+###

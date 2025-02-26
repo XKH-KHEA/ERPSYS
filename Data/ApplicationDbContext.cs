@@ -1,5 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using ERPSYS.Controllers.FinanceControll;
 using ERPSYS.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace ERPSYS.Data // Ensure this matches your project's namespace
 {
@@ -8,6 +9,7 @@ namespace ERPSYS.Data // Ensure this matches your project's namespace
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
 
         public DbSet<User> Users { get; set; }
+        public DbSet<ChartOfAccount> ChartOfAccounts { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<User>()

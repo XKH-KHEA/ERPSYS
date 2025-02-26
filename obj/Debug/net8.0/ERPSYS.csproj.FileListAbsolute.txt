@@ -285,6 +285,7 @@ C:\Users\ROG\Documents\ASP_NET\ERPSYS\obj\Debug\net8.0\staticwebassets\msbuild.b
 C:\Users\ROG\Documents\ASP_NET\ERPSYS\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.ERPSYS.props
 C:\Users\ROG\Documents\ASP_NET\ERPSYS\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.ERPSYS.props
 C:\Users\ROG\Documents\ASP_NET\ERPSYS\obj\Debug\net8.0\staticwebassets.pack.json
+C:\Users\ROG\Documents\ASP_NET\ERPSYS\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\Users\ROG\Documents\ASP_NET\ERPSYS\obj\Debug\net8.0\ERPSYS.csproj.Up2Date
 C:\Users\ROG\Documents\ASP_NET\ERPSYS\obj\Debug\net8.0\ERPSYS.dll
 C:\Users\ROG\Documents\ASP_NET\ERPSYS\obj\Debug\net8.0\refint\ERPSYS.dll

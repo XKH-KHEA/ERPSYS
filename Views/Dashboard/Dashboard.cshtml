@@ -2,8 +2,9 @@
     ViewData["Title"] = "Dashboard";
     Layout = null;
 }
-<link rel="stylesheet" href="~/css/StyleSheet.css">
-<script src="~/js/JavaScript.js"></script>
+<link rel="stylesheet" href="~/css/dashboard.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="~/js/JavaScript.js" defer></script>
 <div class="card">
     <div class="row">
         <div class="col-md-4">
@@ -54,7 +55,7 @@
                 </div>
             </div>
         </div>
-        
+
         <div class="col-md-6">
             <div class="card">
                 <div class="card-header">Recent Activities</div>
@@ -76,4 +77,66 @@
             </div>
         </div>
     </div>
+
+    <!-- Charts Section -->
+    @* <div class="row mt-4"> *@
+    @*     <div class="col-md-6"> *@
+    @*         <div class="card"> *@
+    @*             <div class="card-header">Sales Overview</div> *@
+                <div class="card-body">
+                    <canvas id="barChart"></canvas>
+                </div>
+        @*     </div> *@
+        @* </div> *@
+
+        @* <div class="col-md-6"> *@
+        @*     <div class="card"> *@
+                <div class="card-header">Revenue Distribution</div>
+                <div class="card-body">
+                    <canvas id="pieChart"></canvas>
+                </div>
+        @*     </div> *@
+        @* </div> *@
+    @* </div> *@
 </div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // Bar Chart
+        var barCtx = document.getElementById('#barChart').getContext('2d');
+        new Chart(barCtx, {
+            type: 'bar',
+            data: {
+                labels: ['January', 'February', 'March', 'April', 'May', 'June'],
+                datasets: [{
+                    label: 'Sales',
+                    data: [12000, 15000, 11000, 18000, 17000, 20000],
+                    backgroundColor: 'rgba(54, 162, 235, 0.6)',
+                    borderColor: 'rgba(54, 162, 235, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false
+            }
+        });
+
+        // Pie Chart
+        var pieCtx = document.getElementById('#pieChart').getContext('2d');
+        new Chart(pieCtx, {
+            type: 'pie',
+            data: {
+                labels: ['Product A', 'Product B', 'Product C'],
+                datasets: [{
+                    data: [40, 30, 30],
+                    backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56']
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false
+            }
+        });
+    });
+</script>
